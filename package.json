@@ -1,15 +1,18 @@
 {
   "name": "docker-node-app",
-  "version": "1.1.1",
+  "type": "module",
+  "version": "1.2.0",
   "description": "Node.js on Alpine in Docker",
   "author": "Andras Serfozo <subztep@gmail.com>",
   "repository": "github:SubZtep/docker-node-app",
   "license": "Unlicense",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node -r dotenv/config server.js",
+    "build": "docker build -t subztep/docker-node-app:1.2.0 ."
   },
   "dependencies": {
-    "express": "latest"
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
   }
 }

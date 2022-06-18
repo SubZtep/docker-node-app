@@ -2,5 +2,5 @@ services:
   web:
     image: subztep/node-web-app
     ports:
-      - "8080:8080"
+      - "696:696"
     build: .
